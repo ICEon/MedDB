@@ -28,7 +28,7 @@ $(document).ready(function(e) {
     db.transaction (function (transaction)
       {
        var sql = "CREATE TABLE IF NOT EXISTS Pacientes " +
-       " (CvePaciente INTEGER AUTOINCREMENT, " +
+       " (CvePaciente INTEGER AUTONUMERIC, " +
        "NombrePaciente NOT NULL, " +
        "EdadPaciente NOT NULL, " +
        "DirPaciente , " +
