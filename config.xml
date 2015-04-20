@@ -1,37 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.example"
-        versionCode = "10" 
-        version     = "1.0.0" >
+<?xml version="1.0" encoding="UTF-8"?>  
+ <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->  
+ <widget xmlns   = "http://www.w3.org/ns/widgets"  
+     xmlns:gap = "http://phonegap.com/ns/1.0"  
+     id    = "com.phonegap.Medico"  
+     version  = "1.0.0">  
+	 
+   <name>Proyecto Medico </name>  
+   
+   <description>  
+     Aplicacion para moviles.
+   </description>  
+   
+   <author href="https://build.phonegap.com" email="micorreo@gmail.com">  
+       Yo
+   </author>  
+   
+   <!-- Personaliza la aplicacion y plataforma  -->  
+   <preference name="phonegap-version"      value="3.7.0" />    
+   <preference name="orientation"        value="portrait" />    
+   <preference name="target-device"      value="universal" />   
+   <preference name="fullscreen"         value="true" />      
+   <preference name="android-installLocation"  value="auto" />  
+   <preference name="SplashScreen" value="splash"/>
+   <preference name="SplashScreenDelay" value="5000"/>
 
-    <!-- versionCode is optional and Android only -->
 
-    <name>PROYECTO</name>
+   <!-- Plugins -->  
+   <!-- Core plugins -->  
 
-    <description>
-       APLICACIÓN DE AREA DE SALUD
-    </description>
+   <gap:plugin name="org.apache.cordova.dialogs" />  
+   <gap:plugin name="org.apache.cordova.file" />  
+   <gap:plugin name="org.apache.cordova.file-transfer" />  
+   <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />  
+   <gap:plugin name="org.apache.cordova.vibration" />  
 
+   <!-- Third party plugins -->  
+   
+   <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->  
 
-	<!-- ICONO -->
-		<icon src="icono.png" gap:platform="android" gap:density="1dpi" />
-			<gap:splash src="icono.png" gap:platform="android" gap:density="1dpi" />
-			<gap:splash src="icono.png" gap:platform="android" gap:density="mdpi" />
-			<gap:splash src="icono.png" gap:platform="android" gap:density="hdpi" />
-			<gap:splash src="icono.png" gap:platform="android" gap:density="xhdpi" />
-			
+   <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" version="1.0" />
+   <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.6" />
+   
+   <!-- Define app icon for each platform. -->  
+   <icon src="icon.png" />  
+   <icon src="res/icon/android/icon-36-ldpi.png"  gap:platform="android"  gap:qualifier="ldpi" />  
+   <icon src="res/icon/android/icon-48-mdpi.png"  gap:platform="android"  gap:qualifier="mdpi" />  
+   <icon src="res/icon/android/icon-72-hdpi.png"  gap:platform="android"  gap:qualifier="hdpi" />  
+   <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android"  gap:qualifier="xhdpi" />  
 
-    <preference name="phonegap-version" value="3.1.0" />
-	
-    <author href="https://build.phonegap.com" email="support@phonegap.com">
-        Alejandro Ivan Romero Portillo
-		Jonathan Mialma Martinez
-		Edher Eduardo Muñoz Mancera
-    </author>
-	
-        <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
-		<gap:plugin name="org.apache.cordova.vibration" version="0.3.0" />
-        <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+   <!-- Define app splash screen for each platform. -->  
+   <gap:splash src="splash.png" />
+   <gap:splash src="res/screen/android/screen-ldpi-portrait.png"    gap:platform="android" gap:qualifier="port-ldpi" />  
+   <gap:splash src="res/screen/android/screen-mdpi-portrait.png"    gap:platform="android" gap:qualifier="port-mdpi" />  
+   <gap:splash src="res/screen/android/screen-hdpi-portrait.png"    gap:platform="android" gap:qualifier="port-hdpi" />  
+   <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"   gap:platform="android" gap:qualifier="port-xhdpi" />  
 
-</widget>
+   
+ </widget>  
